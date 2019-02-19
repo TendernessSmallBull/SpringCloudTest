@@ -57,5 +57,6 @@
     <modules>
         <module>springcloud-eureka-server</module>
         <module>springcloud-eureka-client</module>
+        <module>springcloud-ribbon-server</module>
     </modules>
 </project>
