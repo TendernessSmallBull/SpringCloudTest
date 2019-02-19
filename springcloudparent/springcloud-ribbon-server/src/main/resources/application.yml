@@ -1,7 +1,12 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://zhaoxin1:zhaoxin1@localhost:8761/eureka/
+  instance:
+    ip-address: 192.168.12.87
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+    lease-expiration-duration-in-seconds: 30    lease-renewal-interval-in-seconds: 15
 server:
   port: 8764
 spring:

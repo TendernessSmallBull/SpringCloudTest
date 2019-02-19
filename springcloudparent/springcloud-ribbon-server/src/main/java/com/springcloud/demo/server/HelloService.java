@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 /**  
- * Description: 描述 
+ * Description: 通过restTemplate方式访问链接
  * @author zx  
  * @date 2019年2月19日  
  */

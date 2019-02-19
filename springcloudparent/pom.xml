@@ -59,4 +59,21 @@
         <module>springcloud-eureka-client</module>
         <module>springcloud-ribbon-server</module>
     </modules>
+    <!-- 
+       配置maven私服地址
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://192.168.180.115:8081/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>  
+     -->
 </project>

@@ -8,6 +8,7 @@
   <artifactId>springcloud-ribbon-server</artifactId>
   
   <dependencies>
+      <!-- eureka 客户端 -->
       <dependency>
           <groupId>org.springframework.cloud</groupId>
           <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -16,6 +17,7 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-web</artifactId>
       </dependency>
+      <!-- 添加ribbon 支持 -->
       <dependency>
           <groupId>org.springframework.cloud</groupId>
           <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>

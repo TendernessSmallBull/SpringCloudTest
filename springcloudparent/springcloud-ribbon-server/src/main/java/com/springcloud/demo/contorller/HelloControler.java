@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springcloud.demo.server.HelloService;
 
 /**  
- * Description: 描述 
+ * Description: ribbon 访问测试链接
  * @author zx  
  * @date 2019年2月19日  
  */
 @RestController
 public class HelloControler {
-
+	/**
+	 * @Autowired 自动注入
+	 */
 	@Autowired
     HelloService helloService;
 
