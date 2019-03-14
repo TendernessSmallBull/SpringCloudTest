@@ -22,10 +22,10 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ServiceRibbonApplication {
+public class RibbonServerApplication {
 
 	public static void main(String[] args) {
-        SpringApplication.run( ServiceRibbonApplication.class, args );
+        SpringApplication.run( RibbonServerApplication.class, args );
     }
 	/**
 	 * @LoadBalanced 添加负载均衡

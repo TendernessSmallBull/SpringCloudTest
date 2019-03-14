@@ -12,3 +12,4 @@ server:
 spring:
   application:
     name: springcloud-ribbon-server
+    
