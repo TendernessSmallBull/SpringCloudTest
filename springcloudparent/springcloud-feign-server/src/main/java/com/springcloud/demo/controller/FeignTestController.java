@@ -1,10 +1,3 @@
-/**  
- * Title: FeignTestController.java  
- * Description:描述 
- * @author zx  
- * @date 2019年3月14日  
- * @version 1.0  
- */  
 package com.springcloud.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
