@@ -1,6 +1,6 @@
 /**  
  * Title: FeignTestService.java  
- * Description:描述 
+ * Description:feign调用接口
  * @author zx  
  * @date 2019年3月14日  
  * @version 1.0  
@@ -17,9 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author zx  
  * @date 2019年3月14日  
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "springcloud-eureka-client")
 public interface FeignTestService {
-
-	@RequestMapping(value = "/hi",method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/port",method = RequestMethod.GET)
+	/**
+	 * Description: feign测试调用方法
+	 * @param name
+	 * @return
+	 */
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 }

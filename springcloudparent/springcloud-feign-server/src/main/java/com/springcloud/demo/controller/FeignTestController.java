@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springcloud.demo.inter.FeignTestService;
 
 /**  
- * Description: 描述 
+ * Description: 测试controller
  * @author zx  
  * @date 2019年3月14日  
  */

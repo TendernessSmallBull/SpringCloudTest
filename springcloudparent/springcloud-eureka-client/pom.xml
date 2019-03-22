@@ -11,10 +11,12 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
+	   <!-- eureka客户端 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<!-- web核心包 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -25,7 +27,7 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- Swagger核心包 start -->
+		<!-- Swagger核心包-->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -36,7 +38,6 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 		</dependency>
-		<!-- Swagger核心包 end -->
 		<!-- @ConfigurationProperties提示告警  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

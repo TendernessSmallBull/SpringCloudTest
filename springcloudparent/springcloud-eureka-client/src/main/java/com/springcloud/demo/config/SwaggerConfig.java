@@ -16,8 +16,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Description: swagger2配置类 从swagger2.properties中获取配置信息，若没有则使用默认值
- * 
+ * Description: swagger2配置类 
+ * 				从swagger2.properties中获取配置信息，若没有则使用默认值
  * @author zx
  * @date 2019年3月21日
  */
@@ -47,6 +47,14 @@ public class SwaggerConfig {
 	@Autowired
 	private SwaggerConfigration swaggerConfigration;
 
+	/**
+	    *  创建API应用
+     * apiInfo() 增加API相关信息
+                 *     通过select()函数返回一个ApiSelectorBuilder实例,用来控制哪些接口暴露给Swagger来展现，
+                 *     本例采用指定扫描的包路径来定义指定要建立API的目录。
+	 * Description: 描述 
+	 * @return
+	 */
 	@Bean
 	public Docket createRestApi() {
 		String basePackage = swaggerConfigration.getScanPackage();
@@ -63,6 +71,12 @@ public class SwaggerConfig {
 				.build();
 	}
 
+	/**
+	 *   创建该API的基本信息（这些基本信息会展现在文档页面中）
+	 *   访问地址：http://项目实际地址/swagger-ui.html
+	 * Description: 描述 
+	 * @return
+	 */
 	private ApiInfo apiInfo() {
 		String version = swaggerConfigration.getVersion();
 		String description = swaggerConfigration.getDescription();

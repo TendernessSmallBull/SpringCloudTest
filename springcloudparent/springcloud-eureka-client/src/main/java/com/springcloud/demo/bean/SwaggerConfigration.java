@@ -5,7 +5,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
- * Description: 若@ConfigurationProperties提示告警 则再pom.xml中
+ * Description: swagger2.properties配置文件对应bean类
+ * 				若@ConfigurationProperties提示告警 则再pom.xml中
  * 				添加spring-boot-configuration-processor
  * 
  * @author zx
@@ -15,11 +16,22 @@ import org.springframework.stereotype.Component;
 @PropertySource(value = "classpath:swagger2.properties")
 @ConfigurationProperties(prefix = "swagger2")
 public class SwaggerConfigration {
-
+	/**
+	 * 被swagger扫描的包（模糊匹配）
+	 */
 	private String scanPackage;
+	/**
+	 * 页面展示标题
+	 */
 	private String title;
+	/**
+	 * 页面展示描述信息
+	 */
 	private String description;
 	private String url;
+	/**
+	 * 版本
+	 */
 	private String version;
 	
 	public String getScanPackage() {
