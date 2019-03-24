@@ -12,3 +12,10 @@ server:
 spring:
   application:
     name: springcloud-ribbon-server
+    
+#springcloud-eureka-client:
+#  ribbon:
+#    NFLoadBalancerRuleClassName:com.netflix.loadbalancer.RandomRule
+
+
+    
