@@ -104,5 +104,11 @@ public class UserController {
     	System.out.println(user);
 		return user;
     }
+    
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String getHello(){
+        System.out.println("=================1===============2============3=============");
+        return "Hello World";
+    }
 
 }

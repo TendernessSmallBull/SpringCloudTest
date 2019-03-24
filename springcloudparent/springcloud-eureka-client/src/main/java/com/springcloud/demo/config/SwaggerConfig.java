@@ -102,7 +102,7 @@ public class SwaggerConfig {
 				// 设置文档的版本信息-> 1.1 Version information
 				.version(version)
 				// 设置文档的License信息->1.3 License
-//				.termsOfServiceUrl(url)
+				.termsOfServiceUrl(url)
 				.build();
 	}
 
