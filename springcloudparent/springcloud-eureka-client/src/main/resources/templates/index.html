@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
-<title></title>
-<script src="js/jquery-1.7.2.js"></script>
+<title>测试</title>
+<script src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 
 
@@ -35,17 +35,20 @@
 <body>
 	<!-- 删除 -->
 	<button id="btn" onclick="del()">delete request</button>
-	
+	</br>
+	</br>
 	<!-- 更新 -->
 	<button id="btn2" onclick="upd()">update request</button>
-	
+	</br>
+	</br>
 	<!-- 增加 -->
-	<form action="http://localhost/student/addone" method="post">
-		major<input type="text" name="major" /> 
-		t_name<input type="text" name="t_name" /> 
+	<form action="http://192.168.12.94/student/addone" method="post">
+		adress  <input type="text" name="adress" /> </br>
+		name    <input type="text" name="name" /> </br>
 		<input type="submit" value="submit" />
 	</form>
-
+    </br>
+    </br>
 	<!-- 查询 -->
 	<a href="http://localhost/student/findone/6">select request</a>
 </body>

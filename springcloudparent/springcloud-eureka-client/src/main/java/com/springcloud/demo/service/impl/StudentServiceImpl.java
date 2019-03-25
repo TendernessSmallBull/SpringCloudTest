@@ -2,6 +2,8 @@ package com.springcloud.demo.service.impl;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,8 @@ import com.springcloud.demo.service.StudentService;
  */
 @Service 
 public class StudentServiceImpl implements StudentService {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired  
     private StudentDao studentDao;
@@ -40,7 +44,10 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> findAllStudent() {
-        // TODO Auto-generated method stub
+    	logger.debug("debug级别日志：查看所有学生对象");
+    	logger.warn("warn级别日志：查看所有学生对象");
+    	logger.info("info级别日志：查看所有学生对象");
+    	logger.error("error级别日志：查看所有学生对象");
         return studentDao.findAll();
         
     }
