@@ -25,7 +25,8 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport{
 	@Override
     public void addViewControllers(ViewControllerRegistry registry ) {
 		logger.info("首页地址为：index.html");
-        registry.addViewController("/").setViewName("forward:/index"); // 默认页面(跳转到java路径)
+		// 默认页面(跳转到java路径)
+        registry.addViewController("/").setViewName("forward:/index"); 
         registry.setOrder( Ordered.HIGHEST_PRECEDENCE );
         super.addViewControllers( registry );
     } 

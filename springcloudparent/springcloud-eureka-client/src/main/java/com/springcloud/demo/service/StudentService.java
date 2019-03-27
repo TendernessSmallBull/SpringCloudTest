@@ -17,7 +17,7 @@ public interface StudentService {
     public void addStudent(Student student);
     /**
      * Description: 描述 
-     * @param student
+     * @param id
      */
     public void deleteStudent(Integer id);
     /**
@@ -27,7 +27,7 @@ public interface StudentService {
     public void updateStudent(Student student);
     /**
      * Description: 描述 
-     * @param student
+     * @return
      */
     public List<Student> findAllStudent();
 }

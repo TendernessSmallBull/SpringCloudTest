@@ -59,6 +59,7 @@
         <module>springcloud-eureka-client</module>
         <module>springcloud-ribbon-server</module>
         <module>springcloud-feign-server</module>
+        <module>springcloud-zuul-server</module>
     </modules>
     <!-- 
        配置maven私服地址

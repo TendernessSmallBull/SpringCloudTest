@@ -27,7 +27,8 @@ public class BaseErrorPage implements ErrorController {
     @RequestMapping
     public String error(HttpServletRequest request) {
     	Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-        if(statusCode == 404){
+    	Integer pageUnfind = 404;
+        if(statusCode.equals(pageUnfind)){
         	logger.info("======找不到页面，进入错误提示页面======");
             return "/404";
         }else{

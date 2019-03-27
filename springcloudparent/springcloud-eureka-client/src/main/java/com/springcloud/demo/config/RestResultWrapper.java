@@ -13,9 +13,9 @@ import com.springcloud.demo.bean.RestResult;
 /**  
  * Description: 可拦截所有controller 返回值，对返回值进行包装 （这里有问题实现ResponseBodyAdvice后swagger页面报错）
  * @author zx  
- * @date 2019年3月26日  
+ * @date 2019年3月26日
+ * @ControllerAdvice  
  */
-//@ControllerAdvice
 public class RestResultWrapper implements ResponseBodyAdvice<Object> {
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
