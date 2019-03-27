@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springcloud.demo.bean.Student;
 import com.springcloud.demo.service.StudentService;
 /**
- * Description: restful测试controller
+ * Description: restful风格接口测试controller
  * @author zx  
  * @date 2019年3月24日
  */

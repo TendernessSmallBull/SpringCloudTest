@@ -11,12 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**  
- * Description: 用来访问静态页面
+ * Description: 用来访问静态页面Controller
  * @author zx  
  * @date 2019年3月25日  
  */
 @Controller
-public class htmlController {
+public class HtmlController {
 	
 	@GetMapping("/index")
 	public String htmlString() {

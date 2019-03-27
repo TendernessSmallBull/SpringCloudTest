@@ -17,7 +17,7 @@ public class ReturnMessageUtil {
 	 * @return
 	 */
 	public static ReturnMessage<Object> sucess(Object object) {
-		ReturnMessage<Object> message = new ReturnMessage<Object>(0,"sucess",object);
+		ReturnMessage<Object> message = new ReturnMessage<Object>(1,"sucess",object);
 		return message;
 	}
 	/**
@@ -25,7 +25,7 @@ public class ReturnMessageUtil {
 	 * @return
 	 */
 	public static ReturnMessage<Object> sucess() {
-		ReturnMessage<Object> message = new ReturnMessage<Object>(0,"sucess",null);
+		ReturnMessage<Object> message = new ReturnMessage<Object>(1,"sucess",null);
 		return message;
 	}
 	/**

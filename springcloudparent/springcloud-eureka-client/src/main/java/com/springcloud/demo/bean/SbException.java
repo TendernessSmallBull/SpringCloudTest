@@ -9,11 +9,10 @@ public class SbException extends RuntimeException{
 
 	private static final long serialVersionUID = -8201518085425482189L;
 	 
-	private Integer code;
+	private Integer code = -1;
 	
-	public SbException(Integer code,String message) {
+	public SbException(String message) {
 		super(message);
-		this.code = code;
 	}
 	public Integer getCode() {
 		return code;
