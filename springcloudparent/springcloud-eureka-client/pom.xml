@@ -64,6 +64,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <!-- themeleaf模板对html5格式要求比较严格，需要增加LEGACYHTML5支持，使其对格式要求更友好 -->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+		</dependency>
         <!-- json处理框架 -->
         <dependency>
 		    <groupId>com.alibaba</groupId>

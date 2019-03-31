@@ -1,0 +1,27 @@
+1.	为什么config中多出来一个bootstrap.properties配置文件？
+答：	因为spring boot是启动的时候才从配置文件中读取配置属性，配置文件在远程配置中心的话，
+	注册中心的信息需要放在bootstrap.properties中才能启动优先读取，
+	放在application.properties.会报该异常没发现属性
+
+2.	在刷新文件时访问/refresh【需要post请求】时报错404？
+答：	一、	SpringCloud2.0以后,没有/refresh手动调用的刷新配置地址
+		也就是SpringCloud暴露了一个接口 /refresh 来给我们去刷新配置,但是SpringCloud 2.0.0以后,有了改变.
+		我们需要在bootstrap.yml里面加上需要暴露出来的地址【总线bus-refresh】
+		现在的地址也不是/refresh了,而是/actuator/refresh
+	二、	在pom.xml中需要引入：
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        
+3.	需要刷新生效 还需再启动类中加入@RefreshScope注解。
+
+4.	可以通过http://192.168.0.105:8768/actuator/health（get请求） 来检测config是否正常运行
+           返回结果为：{"status":"UP"}
+      
+5.	加入总线后可以通过http://localhost:xxxx/actuator/bus-refresh链接来刷新配置
+	/actuator/bus-refresh接口可以指定服务，
+	即使用"destination"参数，比如 “/actuator/bus-refresh?destination=customers:**” 即刷新服务名为customers的所有服务。
+
+6.http://192.168.86.250:15672/
+		
