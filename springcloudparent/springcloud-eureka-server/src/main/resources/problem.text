@@ -1,0 +1,12 @@
+1.这时打开 http://localhost:8762/hi?name=forezp ，你会在浏览器上看到 " 请问一下，访问的时候为什么不加项目名称？ service-hi
+答：springboot项目默认不需要加项目名称，只有特殊配置后才需要加
+
+2.eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: false  # 默认是true 开启服务注册
+  F版本不加@EnableEurekaClient是不是也可以呢?我没加这个,服务也被发现
+
+3.eureka.client.healthcheck.enabled=true
+

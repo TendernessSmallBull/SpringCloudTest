@@ -1,0 +1,5 @@
+1.尝试在service-ribbon的pom中将ribbon相关的jar依赖注掉了,但是依旧可以实现同样的效果.
+    请问在这里ribbon的功能是什么,感觉负载均衡好像是RestTemplate的LoadBalanced注解实现的.？
+答：在eureka-client里面包含了ribbon的jar，所以注释掉也不会有影响。
+
+2.
