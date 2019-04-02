@@ -1,0 +1,1 @@
+1.新版本必须手动开启hystrix功能，即在配置文件中声明feign.hystrix.enabled=true，老版本有默认生效的

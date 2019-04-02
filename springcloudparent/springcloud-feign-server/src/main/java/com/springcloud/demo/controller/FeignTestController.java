@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springcloud.demo.inter.FeignTestService;
+import com.springcloud.demo.service.FeignTestService;
 
 /**  
  * Description: 测试controller
