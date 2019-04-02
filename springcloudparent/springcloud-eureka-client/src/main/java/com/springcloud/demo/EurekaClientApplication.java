@@ -1,13 +1,17 @@
 package com.springcloud.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * Description: 模拟eureka客户端一个简单的链接例子：获取服务启动端口号
@@ -24,6 +28,16 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaClient
 @RestController
 public class EurekaClientApplication {
+    
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+    
+    @Autowired
+    RestTemplate restTemplate;
+    
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaClientApplication.class, args);
 	}
@@ -38,5 +52,10 @@ public class EurekaClientApplication {
 			@RequestParam(value = "name", defaultValue = "赵大大") String name) {
 		return "Hello " + name + " ,I am from port:" + port;
 	}
+	
+	@RequestMapping(value = "/zipkin", method = RequestMethod.GET)
+    public String zipkinTest(String name) {
+	    return restTemplate.getForObject("http://springcloud-zipkin-client/port?name="+name,String.class);
+    }
 
 }

@@ -24,5 +24,10 @@ public class HelloControler {
     public String hi(@RequestParam String name) {
         return helloService.hiService( name );
     }
+    
+    @GetMapping(value = "/zipkin")
+    public String zipkin(@RequestParam String name) {
+        return helloService.zipkinService(name);
+    }
 
 }

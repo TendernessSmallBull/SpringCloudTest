@@ -28,6 +28,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
   	  </dependency>
+  	  <!-- Spring Cloud Sleuth zipkin组件支持 -->
+  	  <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+	  </dependency>
+	  <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave</artifactId>
+            <version>5.5.0</version>
+        </dependency>
   </dependencies>
 
 </project>

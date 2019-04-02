@@ -9,7 +9,7 @@ import com.springcloud.demo.service.FeignTestService;
  * @date 2019年4月2日
  */
 @Component
-public class FeignTestServiceHihystric implements FeignTestService{
+public class FeignTestServiceHihystricImpl implements FeignTestService{
 
     @Override
     public String sayHiFromClientOne(String name) {

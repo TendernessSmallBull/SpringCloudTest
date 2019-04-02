@@ -23,6 +23,11 @@ public class HelloService {
         return restTemplate.getForObject("http://SPRINGCLOUD-EUREKA-CLIENT/port?name="+name,String.class);
     }
 	
+	@HystrixCommand(fallbackMethod = "portError")
+    public String zipkinService(String name) {
+        return restTemplate.getForObject("http://SPRINGCLOUD-EUREKA-CLIENT/zipkin?name="+name,String.class);
+    }
+	
 	public String portError(String name) {
         return "hi,"+name+",sorry,error!";
     }

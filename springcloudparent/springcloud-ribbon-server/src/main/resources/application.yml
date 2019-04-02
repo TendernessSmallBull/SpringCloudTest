@@ -12,10 +12,13 @@ server:
 spring:
   application:
     name: springcloud-ribbon-server
+  zipkin:    base-url: http://192.168.86.250:9411
+    
     
 #springcloud-eureka-client:
 #  ribbon:
-#    NFLoadBalancerRuleClassName:com.netflix.loadbalancer.RandomRule
+#    NFLoadBalancerRuleClassName:com.netflix.loadbalancer.RandomRule 
+
 
 
     

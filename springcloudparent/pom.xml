@@ -62,6 +62,7 @@
         <module>springcloud-zuul-server</module>
         <module>springcloud-config-server</module>
         <module>springcloud-config-client</module>
+        <module>springcloud-zipkin-client</module>
     </modules>
     <!-- 
        配置maven私服地址

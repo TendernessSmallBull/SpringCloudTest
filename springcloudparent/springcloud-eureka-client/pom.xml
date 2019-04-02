@@ -11,7 +11,7 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
-	   <!-- eureka客户端 -->
+		<!-- eureka客户端 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -27,7 +27,7 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- Swagger核心包-->
+		<!-- Swagger核心包 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -38,7 +38,7 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 		</dependency>
-		<!-- @ConfigurationProperties提示告警  -->
+		<!-- @ConfigurationProperties提示告警 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
@@ -52,44 +52,54 @@
 		</dependency>
 		<!-- 添加jpa支持 -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		<!--用来渲染页面 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <!-- themeleaf模板对html5格式要求比较严格，需要增加LEGACYHTML5支持，使其对格式要求更友好 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- themeleaf模板对html5格式要求比较严格，需要增加LEGACYHTML5支持，使其对格式要求更友好 -->
 		<dependency>
 			<groupId>net.sourceforge.nekohtml</groupId>
 			<artifactId>nekohtml</artifactId>
 		</dependency>
-        <!-- json处理框架 -->
-        <dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>fastjson</artifactId>
-		    <version>1.2.47</version>
+		<!-- json处理框架 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.47</version>
 		</dependency>
+		<!-- Spring Cloud Sleuth zipkin组件支持 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave</artifactId>
+            <version>5.5.0</version>
+        </dependency>
 	</dependencies>
 	<build>
-	   <plugins>
-	      <plugin>
-	         <groupId>org.springframework.boot</groupId>
-	         <artifactId>spring-boot-maven-plugin</artifactId>
-	         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
-			 <thymeleaf-layout-dialect.version>2.0.5</thymeleaf-layout-dialect.version>
-	         <configuration>
-		         <!-- 忽略测试 -->
-		         <skip>true</skip>
-		         <source>1.8</source>
-				 <target>1.8</target>
-	        </configuration>
-	      </plugin>
-	   </plugins>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+				<thymeleaf-layout-dialect.version>2.0.5</thymeleaf-layout-dialect.version>
+				<configuration>
+					<!-- 忽略测试 -->
+					<skip>true</skip>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
