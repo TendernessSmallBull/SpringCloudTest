@@ -13,7 +13,15 @@ spring:
   application:
     name: springcloud-ribbon-server
   zipkin:    base-url: http://192.168.86.250:9411
-    
+#不添加这个/actuator/hystrix.stream 404        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
     
 #springcloud-eureka-client:
 #  ribbon:

@@ -2,4 +2,16 @@
     请问在这里ribbon的功能是什么,感觉负载均衡好像是RestTemplate的LoadBalanced注解实现的.？
 答：在eureka-client里面包含了ribbon的jar，所以注释掉也不会有影响。
 
-2.
+2.当添加Hystrix Dashboard组件查看数据监控和友好的图形化界面时 需要先运行下面链接看是否有数据ping.
+http://localhost:8762/actuator/hystrix.stream
+注意两点:1、在访问呢此链接之前要先访问一次任一链接，否者页面中ping 空白。
+	  2、若出现404 则需要在配置文件中加入如下属性
+	  		management:
+			  endpoints:
+			    web:
+			      exposure:
+			        include: "*"
+			      cors:
+			        allowed-origins: "*"
+			        allowed-methods: "*"
+                 3、若成功ping通，则接下来 访问http://192.168.0.105:8764/hystrix/页面，并将上面链接填入Hystrix Dashboard文本框中

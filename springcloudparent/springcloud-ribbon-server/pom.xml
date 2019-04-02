@@ -38,6 +38,16 @@
             <artifactId>brave</artifactId>
             <version>5.5.0</version>
         </dependency>
+        <!-- Hystrix Dashboard 断路器监控组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+        <!-- /actuator/hystrix.stream -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
   </dependencies>
 
 </project>
